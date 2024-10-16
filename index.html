@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Game - Beranda</title>
+    <style>
+        /* Gaya untuk pop-up */
+        #popup {
+            display: none; /* Awalnya disembunyikan */
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Pastikan pop-up muncul di atas */
+        }
+        /* Gaya untuk latar belakang gelap */
+        #overlay {
+            display: none; /* Awalnya disembunyikan */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999; /* Di bawah pop-up */
+        }
+        /* Gaya untuk tombol tutup */
+        .close-btn {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <table width="80%" align="center" bgcolor="white" cellpadding="20" cellspacing="0">
+        <tr>
+            <td colspan="3">
+                <h1 align="center"><font face="Arial" color="#333333">SELAMAT DATANG DI PORTAL GAME!</font></h1>
+                <p align="center">Mainkan Berbagai Jenis Game Disini!</p>
+
+                <!-- Navbar -->
+                <table width="100%" cellpadding="10" cellspacing="0" bgcolor="#333333" style="color: white;">
+                    <tr align="center">
+                        <td><a href="index.html" style="text-decoration: none; color: white;">Beranda</a></td>
+                        <td><a href="kategori.html" style="text-decoration: none; color: white;">Kategori Game</a></td>
+                        <td><a href="all_game.html" style="text-decoration: none; color: white;">List All Game</a></td>
+                        <td><a href="kontak.html" style="text-decoration: none; color: white;">Kontak Kami</a></td>
+                    </tr>
+                </table>
+
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <!-- Kolom Berita Terbaru -->
+            <td width="69%" valign="top">
+                <h2>Update Terbaru</h2>
+
+                <!-- Kotak Berita 1 -->
+                <table width="100%" height="100%" cellpadding="10" cellspacing="0" border="1">
+                    <tr>
+                        <td width="25%" height="25%">
+                            <img src="../src/img/comingsoon.png" alt="Cover Berita 1" width="100%" height="100%">
+                        </td>
+                        <td>
+                            <h3>[UPDATE] KATEGORI GAME HORROR</h3>
+                            <p>Tanggal: 12 Oct 2024 02:24:23</p>
+                            <p>Mulai pengalaman baru yang menegangkan dengan memainkan game horror! Nantikan update selanjutnya.</p>
+                            <p><a href="kategori.html">Lihat Kategori...</a></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Kotak Berita 2 -->
+                <table width="100%" height="100%" cellpadding="10" cellspacing="0" border="1">
+                    <tr>
+                        <td width="25%">
+                            <img src="../src/img/undefined/undefined.png" alt="Cover Berita 2" width="100%" height="100%">
+                        </td>
+                        <td>
+                            <h3>[UPDATE] COMING SOON</h3>
+                            <p>Tanggal: COMING SOON</p>
+                            <p>-</p>
+                            <p><a href="#">Lihat Kategori...</a></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Kotak Berita 3 -->
+                <table width="100%" height="100%" cellpadding="10" cellspacing="0" border="1">
+                    <tr>
+                        <td width="25%">
+                            <img src="../src/img/undefined/undefined.png" alt="Cover Berita 3" width="100%" height="100%">
+                        </td>
+                        <td>
+                            <h3>[UPDATE] COMING SOON</h3>
+                            <p>Tanggal: COMING SOON</p>
+                            <p> -</p>
+                            <p><a href="#">Lihat Kategori...</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            
+            <!-- Kolom Informasi Kontak -->
+            <td width="30%" valign="top">
+                <h2>Informasi Kontak</h2>
+
+                <!-- Kotak Informasi Kontak -->
+                <table width="100%" cellpadding="10" cellspacing="0" border="1">
+                    <tr>
+                        <td>
+                            <p>Email: support@portalgame.com</p>
+                            <p>Telepon: +62 123 4567 890</p>
+                            <p>Alamat: Jl. Game No. 123, Kota Game, 12345</p>
+                            <p>Jam Operasional: Senin-Jumat, 09.00-17.00 WIB</p>
+                            <p><b>Ikuti kami di media sosial:</b></p>
+                            <ul>
+                                <li>Facebook: @PortalGameID</li>
+                                <li>Twitter: @PortalGame_ID</li>
+                                <li>Instagram: @portalgame.id</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Kotak Sumber -->
+                <h2>Sumber</h2>
+                <table width="100%" cellpadding="10" cellspacing="0" border="1">
+                    <tr>
+                        <td>
+                            <p>1. friv.com</p>
+                            <p>2. mousebreaker.com</p>
+                            <p>3. games.co.id</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div id="overlay"></div>
+
+    <!-- Elemen Pop-up -->
+    <div id="popup">
+        <p>BOT INI MASIH DALAM TAHAP PENGEMBANGAN. TETAPI HAL ITU TIDAK MENGHAPUS KEMUNGKINAN TERJADINYA ERROR, JIKA BOT TIDAK MERESPON ATAU TIDAK BISA DI AKSES ITU ADALAH HAL YANG WAJAR - AUTHOR</p>
+        <span class="close-btn">Tutup</span>
+    </div>
+
+    <!-- Elemen Audio -->
+    <audio id="myAudio" src="/src/audio/bgm.mp3"></audio>
+
+    <script>
+        // Mengambil elemen
+        var audio = document.getElementById("myAudio");
+        var popup = document.getElementById("popup");
+        var overlay = document.getElementById("overlay");
+        var closeButton = document.querySelector(".close-btn");
+
+        // Fungsi untuk menampilkan pop-up
+        function showPopup() {
+            popup.style.display = "block"; // Menampilkan pop-up
+            overlay.style.display = "block"; // Menampilkan latar belakang gelap
+        }
+
+        // Fungsi untuk memutar audio
+        function playAudio() {
+            audio.currentTime = 0; // Mulai dari awal
+            audio.play().catch(function(error) {
+                console.log("Error saat memutar audio: ", error);
+                alert("Audio tidak dapat diputar. Silakan periksa pengaturan browser Anda.");
+            });
+        }
+
+        // Menampilkan pop-up saat halaman dibuka
+        window.onload = function() {
+            showPopup();
+        };
+
+        // Menambahkan event listener untuk tombol tutup
+        closeButton.addEventListener("click", function() {
+            popup.style.display = "none"; // Menyembunyikan pop-up
+            overlay.style.display = "none"; // Menyembunyikan latar belakang gelap
+            playAudio(); // Memutar audio
+        });
+    </script>
+</body>
+</html>
